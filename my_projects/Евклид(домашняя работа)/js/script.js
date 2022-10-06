@@ -1,11 +1,30 @@
+/* burger */
+const burgerBtn = document.querySelector('.burger');
+const menuClose = document.querySelector('.menu-close');
+const menuBurger = document.querySelector('.nav');
+
+burgerBtn.addEventListener('click', () => {
+   menuBurger.classList.add('burger-active');
+});
+
+menuClose.addEventListener('click', () => {
+   menuBurger.classList.remove('burger-active');
+});
+
+
 /* slider */
-var swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+
   pagination: {
     el: '.swiper-pagination',
+    clickable: true,
   },
 });
 
-/* work-tabs */
+
+/* work-tab */
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.work__btn').forEach(function (e) {
     e.addEventListener('click', function (e) {
@@ -27,22 +46,9 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 /* accordion */
-$( function() {
-  $( "#accordion" ).accordion({
+$(function() {
+  $("#accordion").accordion({
     collapsible: true,
     heightStyle: 'content',
   });
-} );
-
-/* burger */
-const burgerBtn = document.querySelector('.burger');
-const menuClose = document.querySelector('.menu-close');
-const menuBurger = document.querySelector('.nav');
-
-burgerBtn.addEventListener('click', () => {
-   menuBurger.classList.add('burger-active');
-});
-
-menuClose.addEventListener('click', () => {
-   menuBurger.classList.remove('burger-active');
 });
